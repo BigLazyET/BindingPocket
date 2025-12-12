@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RiveRuntime", "RiveRuntime", "{AF48C276-4416-4345-8F27-5F3A06311A11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiveRuntime.iOS", "RiveRuntime\RiveRuntime.iOS\RiveRuntime.iOS.csproj", "{19DFD85C-494D-426C-9078-E20FAA41C32B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{19DFD85C-494D-426C-9078-E20FAA41C32B} = {AF48C276-4416-4345-8F27-5F3A06311A11}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19DFD85C-494D-426C-9078-E20FAA41C32B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19DFD85C-494D-426C-9078-E20FAA41C32B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19DFD85C-494D-426C-9078-E20FAA41C32B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19DFD85C-494D-426C-9078-E20FAA41C32B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
