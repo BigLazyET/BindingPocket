@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net9.0-maccatalyst</TargetFramework>
+        <RuntimeIdentifiers>maccatalyst-arm64;maccatalyst-x64</RuntimeIdentifiers>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>true</ImplicitUsings>
+        <IsBindingProject>true</IsBindingProject>
+
+        <!--
+          Enable trim analyzers for class libraries.
+          To learn more, see: https://learn.microsoft.com/dotnet/core/deploying/trimming/prepare-libraries-for-trimming
+        -->
+        <IsTrimmable>true</IsTrimmable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ObjcBindingApiDefinition Include="ApiDefinition.cs"/>
+        <ObjcBindingCoreSource Include="StructsAndEnums.cs"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <NativeReference Include="RiveRuntime.xcframework">
+            <Kind>Framework</Kind>
+            <SmartLink>False</SmartLink>
+            <Frameworks>CoreGraphics Foundation MetalKit UIKit RiveRuntime</Frameworks>
+        </NativeReference>
+    </ItemGroup>
+</Project>
