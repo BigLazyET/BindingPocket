@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rive.Apple", "RiveRuntime\s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rive.Mac", "RiveRuntime\src\Rive.Mac\Rive.Mac.csproj", "{FBF89E27-E426-41AA-A23E-808819D1D00D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rive.Droid", "RiveRuntime\src\Rive.Droid\Rive.Droid.csproj", "{8D20CC99-1AB2-4DFF-A8D2-A4A6974FF708}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,7 @@ Global
 		{90449A3E-3ED4-4BCA-965F-1BABB433BB72} = {AF48C276-4416-4345-8F27-5F3A06311A11}
 		{086B5C73-F684-4973-AFBA-F79F9386849E} = {90449A3E-3ED4-4BCA-965F-1BABB433BB72}
 		{FBF89E27-E426-41AA-A23E-808819D1D00D} = {90449A3E-3ED4-4BCA-965F-1BABB433BB72}
+		{8D20CC99-1AB2-4DFF-A8D2-A4A6974FF708} = {90449A3E-3ED4-4BCA-965F-1BABB433BB72}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{086B5C73-F684-4973-AFBA-F79F9386849E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -30,5 +33,9 @@ Global
 		{FBF89E27-E426-41AA-A23E-808819D1D00D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBF89E27-E426-41AA-A23E-808819D1D00D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBF89E27-E426-41AA-A23E-808819D1D00D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D20CC99-1AB2-4DFF-A8D2-A4A6974FF708}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D20CC99-1AB2-4DFF-A8D2-A4A6974FF708}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D20CC99-1AB2-4DFF-A8D2-A4A6974FF708}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D20CC99-1AB2-4DFF-A8D2-A4A6974FF708}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
