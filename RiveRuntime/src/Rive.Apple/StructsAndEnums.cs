@@ -1,6 +1,6 @@
 using ObjCRuntime;
 
-namespace Rive.Apple
+namespace RiveRuntime.iOS
 {
 	[Native]
 	public enum RiveHitResult : long

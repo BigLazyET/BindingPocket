@@ -33,7 +33,7 @@ namespace ObjCRuntime
     }
 }
 
-namespace Rive.Apple
+namespace RiveRuntime.iOS
 {
 	// @interface RenderContext : NSObject
 	[BaseType (typeof(NSObject))]
