@@ -26,6 +26,8 @@
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <Authors>BigLazyET</Authors>
+        <Company>BigLazyET</Company>
     </PropertyGroup>
 
     <ItemGroup>
