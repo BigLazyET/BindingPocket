@@ -1,28 +1,59 @@
 using Foundation;
 using Microsoft.Maui.Handlers;
-using Microsoft.Maui.Platform;
 using Rive.Maui.Controls;
 using RiveRuntime.iOS;
 
+
 namespace Rive.Maui;
 
-public partial class RiveSpriteViewHandler : ViewHandler<RiveSpriteView, RiveView>
+public partial class RiveSpriteViewHandler() : ViewHandler<RiveSpriteView, RiveView>(PropertyMapper, CommandMapper)
 {
-    public RiveSpriteViewHandler(IPropertyMapper mapper, CommandMapper? commandMapper = null) : base(mapper, commandMapper)
+    private RiveView? riveView;
+    private RiveSpriteViewModel? riveViewModel;
+    
+    private static readonly IPropertyMapper<RiveSpriteView, RiveSpriteViewHandler> PropertyMapper =
+        new PropertyMapper<RiveSpriteView, RiveSpriteViewHandler>(ViewMapper)
+        {
+            [nameof(RiveSpriteView.ArtboardName)] = MapArtboardName,
+            [nameof(RiveSpriteView.AnimationName)] = MapAnimationName,
+            [nameof(RiveSpriteView.StateMachineName)] = MapStateMachineName,
+            [nameof(RiveSpriteView.AutoPlay)] = MapAutoPlay,
+            [nameof(RiveSpriteView.Fit)] = MapFit,
+            [nameof(RiveSpriteView.Alignment)] = MapAlignment,
+            [nameof(RiveSpriteView.Loop)] = MapLoop,
+            [nameof(RiveSpriteView.Direction)] = MapDirection
+        };
+    
+    private static readonly CommandMapper<RiveSpriteView, RiveSpriteViewHandler> CommandMapper = new(ViewCommandMapper)
     {
-    }
+        [nameof(RiveSpriteView.Play)] = MapPlay,
+        [nameof(RiveSpriteView.Pause)] = MapPause,
+        [nameof(RiveSpriteView.Stop)] = MapStop,
+        [nameof(RiveSpriteView.Reset)] = MapReset,
+        [nameof(RiveSpriteView.SetInput)] = MapSetInput,
+        [nameof(RiveSpriteView.TriggerInput)] = MapTriggerInput,
+        [nameof(RiveSpriteView.SetTextRun)] = MapSetTextRun,
+    };
 
     protected override RiveView CreatePlatformView()
     {
-        var platformView = new RiveView();
-        return platformView;
-    }
-
-    protected override void ConnectHandler(RiveView platformView)
-    {
-        base.ConnectHandler(platformView);
+        if (string.IsNullOrWhiteSpace(VirtualView.ResourceName))
+            throw new Exception("Resource name not specified");
         
-        // var riveVm = new RiveViewModel(platformView);
-        // riveVm.SetView(platformView);
+        // DEPRECATED: animation playback: https://rive.app/docs/runtimes/animation-playback#apple
+        // Priority: machine playback: https://rive.app/docs/runtimes/state-machines
+        // So we check for state machine and not support animation playback anymore, maybe this is so aggressive?
+        
+        if (string.IsNullOrWhiteSpace(VirtualView.StateMachineName))
+            throw new Exception("State machine name not specified, Animation playback was deprecated");
+
+        // TODO: sharpie does not generate animation name parameter in RiveSpriteViewModel constructor, need to check later
+        var riveVm = new RiveSpriteViewModel(fileName: VirtualView.ResourceName, extension: ".riv", bundle: NSBundle.MainBundle,
+            stateMachineName: VirtualView.StateMachineName, fit: RiveFit.contain, alignment: RiveAlignment.center, autoPlay: true,
+            artboardName: null, loadCdn: true, customLoader: null);
+        
+        riveVm.SetHandler(this);
+        riveView = riveVm.CreateRiveView;
+        return  riveView;
     }
 }

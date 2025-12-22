@@ -19,7 +19,20 @@ namespace Rive.Maui;
 // https://rive.app/docs/runtimes/android/android
 public partial class RiveSpriteViewHandler: ViewHandler<RiveSpriteView, RiveAnimationView>
 {
-    public RiveSpriteViewHandler(IPropertyMapper mapper, CommandMapper? commandMapper = null) : base(mapper, commandMapper)
+    private static readonly IPropertyMapper<RiveSpriteView, RiveSpriteViewHandler> PropertyMapper =
+        new PropertyMapper<RiveSpriteView, RiveSpriteViewHandler>(ViewMapper)
+        {
+            [nameof(RiveSpriteView.ArtboardName)] = MapArtboardName,
+            [nameof(RiveSpriteView.AnimationName)] = MapAnimationName,
+            [nameof(RiveSpriteView.StateMachineName)] = MapStateMachineName,
+            [nameof(RiveSpriteView.AutoPlay)] = MapAutoPlay,
+            [nameof(RiveSpriteView.Fit)] = MapFit,
+            [nameof(RiveSpriteView.Alignment)] = MapAlignment,
+            [nameof(RiveSpriteView.Loop)] = MapLoop,
+            [nameof(RiveSpriteView.Direction)] = MapDirection
+        };
+    
+    public RiveSpriteViewHandler(CommandMapper? commandMapper = null) : base(PropertyMapper, commandMapper)
     {
     }
 
@@ -34,7 +47,7 @@ public partial class RiveSpriteViewHandler: ViewHandler<RiveSpriteView, RiveAnim
         base.ConnectHandler(platformView);
         
         if (string.IsNullOrWhiteSpace(VirtualView.ResourceName))
-            throw new Exception("Invalid ResourceName");
+            throw new Exception("Resource name not specified");
         
         // TODO DO we really need to get resource identifier with android api or just get resource bytes with maui api
         var resourceIdentifier = Context.Resources?.GetIdentifier(VirtualView.ResourceName, "drawable", Context.PackageName) ?? 0;

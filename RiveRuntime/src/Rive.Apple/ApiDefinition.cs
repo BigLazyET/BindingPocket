@@ -2065,12 +2065,12 @@ namespace RiveRuntime.iOS
 		// -(instancetype _Nonnull)init:(RiveModel * _Nonnull)model stateMachineName:(NSString * _Nullable)stateMachineName fit:(RiveFit)fit alignment:(RiveAlignment)alignment autoPlay:(BOOL)autoPlay artboardName:(NSString * _Nullable)artboardName __attribute__((objc_designated_initializer));
 		[Export ("init:stateMachineName:fit:alignment:autoPlay:artboardName:")]
 		[DesignatedInitializer]
-		NativeHandle ConstructorWithModelSmName (RiveModel model, [NullAllowed] string stateMachineName, RiveFit fit, RiveAlignment alignment, bool autoPlay, [NullAllowed] string artboardName);
+		NativeHandle Constructor (RiveModel model, [NullAllowed] string stateMachineName, RiveFit fit, RiveAlignment alignment, bool autoPlay, [NullAllowed] string artboardName);
 
 		// -(instancetype _Nonnull)init:(RiveModel * _Nonnull)model animationName:(NSString * _Nullable)animationName fit:(RiveFit)fit alignment:(RiveAlignment)alignment autoPlay:(BOOL)autoPlay artboardName:(NSString * _Nullable)artboardName __attribute__((objc_designated_initializer));
 		[Export ("init:animationName:fit:alignment:autoPlay:artboardName:")]
 		[DesignatedInitializer]
-		NativeHandle ConstructorWithModelAnimName (RiveModel model, [NullAllowed] string animationName, RiveFit fit, RiveAlignment alignment, bool autoPlay, [NullAllowed] string artboardName);
+		NativeHandle Constructor (RiveModel model, [NullAllowed] NSString animationName, RiveFit fit, RiveAlignment alignment, bool autoPlay, [NullAllowed] string artboardName);
 
 		// -(instancetype _Nonnull)initWithFileName:(NSString * _Nonnull)fileName extension:(NSString * _Nonnull)extension in:(NSBundle * _Nonnull)bundle stateMachineName:(NSString * _Nullable)stateMachineName fit:(RiveFit)fit alignment:(RiveAlignment)alignment autoPlay:(BOOL)autoPlay artboardName:(NSString * _Nullable)artboardName loadCdn:(BOOL)loadCdn customLoader:(LoadAsset _Nullable)customLoader __attribute__((objc_designated_initializer));
 		[Export ("initWithFileName:extension:in:stateMachineName:fit:alignment:autoPlay:artboardName:loadCdn:customLoader:")]
@@ -2080,12 +2080,12 @@ namespace RiveRuntime.iOS
 		// -(instancetype _Nonnull)initWithWebURL:(NSString * _Nonnull)webURL stateMachineName:(NSString * _Nullable)stateMachineName fit:(RiveFit)fit alignment:(RiveAlignment)alignment autoPlay:(BOOL)autoPlay loadCdn:(BOOL)loadCdn artboardName:(NSString * _Nullable)artboardName __attribute__((objc_designated_initializer));
 		[Export ("initWithWebURL:stateMachineName:fit:alignment:autoPlay:loadCdn:artboardName:")]
 		[DesignatedInitializer]
-		NativeHandle ConstructorWithWebUrlSmName (string webURL, [NullAllowed] string stateMachineName, RiveFit fit, RiveAlignment alignment, bool autoPlay, bool loadCdn, [NullAllowed] string artboardName);
+		NativeHandle Constructor (string webURL, [NullAllowed] string stateMachineName, RiveFit fit, RiveAlignment alignment, bool autoPlay, bool loadCdn, [NullAllowed] string artboardName);
 
 		// -(instancetype _Nonnull)initWithWebURL:(NSString * _Nonnull)webURL animationName:(NSString * _Nullable)animationName fit:(RiveFit)fit alignment:(RiveAlignment)alignment autoPlay:(BOOL)autoPlay loadCdn:(BOOL)loadCdn artboardName:(NSString * _Nullable)artboardName __attribute__((objc_designated_initializer));
 		[Export ("initWithWebURL:animationName:fit:alignment:autoPlay:loadCdn:artboardName:")]
 		[DesignatedInitializer]
-		NativeHandle ConstructorWithWebUrlAnimName (string webURL, [NullAllowed] string animationName, RiveFit fit, RiveAlignment alignment, bool autoPlay, bool loadCdn, [NullAllowed] string artboardName);
+		NativeHandle Constructor (string webURL, [NullAllowed] NSString animationName, RiveFit fit, RiveAlignment alignment, bool autoPlay, bool loadCdn, [NullAllowed] string artboardName);
 
 		// @property (readonly, nonatomic, strong) RiveModel * _Nullable riveModel;
 		[NullAllowed, Export ("riveModel", ArgumentSemantic.Strong)]

@@ -19,7 +19,7 @@
         <PackageId>RiveRuntime.iOS</PackageId>
         <Title>RiveRuntime iOS</Title>
         <Description>Rive iOS Wrapper to support both iOS and macOS.</Description>
-        <VersionPrefix>1.0.0</VersionPrefix>
+        <VersionPrefix>1.0.1</VersionPrefix>
         <PackageProjectUrl>https://github.com/BigLazyET/BindingPocket</PackageProjectUrl>
         <RepositoryUrl>https://github.com/BigLazyET/BindingPocket</RepositoryUrl>
         <IncludeSymbols>true</IncludeSymbols>
@@ -28,6 +28,10 @@
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <Authors>BigLazyET</Authors>
         <Company>BigLazyET</Company>
+
+        <PackageReleaseNotes>
+            修复构造函数的绑定问题，确保正确初始化 RiveViewModel 对象
+        </PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>
