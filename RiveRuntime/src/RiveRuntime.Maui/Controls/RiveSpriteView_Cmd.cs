@@ -1,7 +1,22 @@
+using System.Windows.Input;
+using Microsoft.Maui.Controls;
+
 namespace RiveRuntime.Maui.Controls;
 
 public partial class RiveSpriteView
 {
+    public ICommand PlayCommand
+        => new Command(Play);
+
+    public ICommand PauseCommand
+        => new Command(Pause);
+
+    public ICommand StopCommand
+        => new Command(Stop);
+
+    public ICommand ResetCommand
+        => new Command(Reset);
+    
     public void Play()
         => Handler?.Invoke(nameof(Play));
 

@@ -42,15 +42,12 @@ public partial class RiveSpriteViewHandler() : ViewHandler<RiveSpriteView, RiveV
         
         // DEPRECATED: animation playback: https://rive.app/docs/runtimes/animation-playback#apple
         // Priority: machine playback: https://rive.app/docs/runtimes/state-machines
-        // So we check for state machine and not support animation playback anymore, maybe this is so aggressive?
         
-        if (string.IsNullOrWhiteSpace(VirtualView.StateMachineName))
-            throw new Exception("State machine name not specified, Animation playback was deprecated");
-
-        // TODO: sharpie does not generate animation name parameter in RiveSpriteViewModel constructor, need to check later
         riveViewModel = new RiveViewModel(fileName: VirtualView.ResourceName, extension: ".riv", bundle: NSBundle.MainBundle,
             stateMachineName: VirtualView.StateMachineName, fit: RiveFit.contain, alignment: RiveAlignment.center, autoPlay: true,
             artboardName: null, loadCdn: true, customLoader: null);
+        if (!string.IsNullOrWhiteSpace(VirtualView.AnimationName))
+            riveViewModel.RiveModel.SetAnimation(VirtualView.AnimationName, out _);
         
         riveView = riveViewModel.CreateRiveView;
         return  riveView;

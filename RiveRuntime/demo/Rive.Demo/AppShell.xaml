@@ -16,5 +16,15 @@
         Title="StateMachine"
         ContentTemplate="{DataTemplate pages:StateMachinePage}"
         Route="StateMachinePage" />
+    
+    <ShellContent
+        Title="Playback"
+        ContentTemplate="{DataTemplate pages:ControlPlaybackPage}"
+        Route="ControlPlaybackPage" />
+    
+    <ShellContent
+        Title="UpdateProperties"
+        ContentTemplate="{DataTemplate pages:UpdatePropertiesPage}"
+        Route="UpdatePropertiesPage" />
 
 </Shell>
