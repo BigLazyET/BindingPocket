@@ -22,7 +22,7 @@
         <PackageId>RiveRuntime.Android</PackageId>
         <Title>RiveRuntime Android</Title>
         <Description>Rive Android Wrapper to support Android.</Description>
-        <VersionPrefix>1.0.1</VersionPrefix>
+        <VersionPrefix>1.0.2</VersionPrefix>
         <PackageProjectUrl>https://github.com/BigLazyET/BindingPocket</PackageProjectUrl>
         <RepositoryUrl>https://github.com/BigLazyET/BindingPocket</RepositoryUrl>
         <IncludeSymbols>true</IncludeSymbols>
@@ -33,8 +33,7 @@
         <Company>BigLazyET</Company>
 
         <PackageReleaseNotes>
-            1\. 修复 AndroidX 依赖版本冲突
-            2\. 对齐 .NET 9 / MAUI 9 的 Android 依赖
+            常规修复
         </PackageReleaseNotes>
     </PropertyGroup>
     

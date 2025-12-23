@@ -1,1 +1,1 @@
-Rive Android Wrapper to support both iOS and macOS.
+Rive Android Wrapper to support android

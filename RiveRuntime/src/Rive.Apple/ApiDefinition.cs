@@ -310,9 +310,9 @@ namespace RiveRuntime.iOS
 		[Export ("advanceBy:")]
 		void AdvanceBy (double elapsedSeconds);
 
-		// -(void)draw:(RiveRenderer * _Nonnull)renderer;
-		[Export ("draw:")]
-		void Draw (RiveRenderer renderer);
+		// // -(void)draw:(RiveRenderer * _Nonnull)renderer;
+		// [Export ("draw:")]
+		// void Draw (RiveRenderer renderer);
 
 		// -(void)bindViewModelInstance:(RiveDataBindingViewModelInstance * _Nonnull)instance __attribute__((swift_name("bind(viewModelInstance:)")));
 		[Export ("bindViewModelInstance:")]
@@ -589,15 +589,15 @@ namespace RiveRuntime.iOS
 		string Text { get; set; }
 	}
 
-	// @interface RiveEventReport : NSObject
-	[BaseType (typeof(NSObject))]
-	interface RiveEventReport
-	{
-		// -(float)secondsDelay;
-		[Export ("secondsDelay")]
-		// [Verify (MethodToProperty)]
-		float SecondsDelay { get; }
-	}
+	// // @interface RiveEventReport : NSObject
+	// [BaseType (typeof(NSObject))]
+	// interface RiveEventReport
+	// {
+	// 	// -(float)secondsDelay;
+	// 	[Export ("secondsDelay")]
+	// 	// [Verify (MethodToProperty)]
+	// 	float SecondsDelay { get; }
+	// }
 
 	// @interface RiveEvent : NSObject
 	[BaseType (typeof(NSObject))]
@@ -1319,18 +1319,18 @@ namespace RiveRuntime.iOS
 		string Name { get; }
 	}
 
-	// @interface RiveRenderer : NSObject
-	[BaseType (typeof(NSObject))]
-	interface RiveRenderer
-	{
-		// -(instancetype _Nonnull)initWithContext:(CGContextRef _Nonnull)context;
-		[Export ("initWithContext:")]
-		NativeHandle Constructor (CGContext context);
-
-		// -(void)alignWithRect:(CGRect)rect withContentRect:(CGRect)contentRect withAlignment:(RiveAlignment)alignment withFit:(RiveFit)fit;
-		[Export ("alignWithRect:withContentRect:withAlignment:withFit:")]
-		void AlignWithRect (CGRect rect, CGRect contentRect, RiveAlignment alignment, RiveFit fit);
-	}
+	// // @interface RiveRenderer : NSObject
+	// [BaseType (typeof(NSObject))]
+	// interface RiveRenderer
+	// {
+	// 	// -(instancetype _Nonnull)initWithContext:(CGContextRef _Nonnull)context;
+	// 	[Export ("initWithContext:")]
+	// 	NativeHandle Constructor (CGContext context);
+	//
+	// 	// -(void)alignWithRect:(CGRect)rect withContentRect:(CGRect)contentRect withAlignment:(RiveAlignment)alignment withFit:(RiveFit)fit;
+	// 	[Export ("alignWithRect:withContentRect:withAlignment:withFit:")]
+	// 	void AlignWithRect (CGRect rect, CGRect contentRect, RiveAlignment alignment, RiveFit fit);
+	// }
 
 	// @protocol RiveMetalDrawableView
 	/*
@@ -1456,20 +1456,20 @@ namespace RiveRuntime.iOS
 		CGPoint ArtboardLocationFromTouchLocation (CGPoint touchLocation, CGRect artboardRect, RiveFit fit, RiveAlignment alignment);
 	}
 
-	// @interface FPSCounterView : UILabel
-	[BaseType (typeof(UILabel), Name = "_TtC11RiveRuntime14FPSCounterView")]
-	interface FPSCounterView
-	{
-		// // -(instancetype _Nonnull)initWithFrame:(CGRect)frame __attribute__((objc_designated_initializer));
-		// [Export ("initWithFrame:")]
-		// [DesignatedInitializer]
-		// NativeHandle Constructor (CGRect frame);
-		//
-		// // -(instancetype _Nullable)initWithCoder:(NSCoder * _Nonnull)coder __attribute__((objc_designated_initializer));
-		// [Export ("initWithCoder:")]
-		// [DesignatedInitializer]
-		// NativeHandle Constructor (NSCoder coder);
-	}
+	// // @interface FPSCounterView : UILabel
+	// [BaseType (typeof(UILabel), Name = "_TtC11RiveRuntime14FPSCounterView")]
+	// interface FPSCounterView
+	// {
+	// 	// // -(instancetype _Nonnull)initWithFrame:(CGRect)frame __attribute__((objc_designated_initializer));
+	// 	// [Export ("initWithFrame:")]
+	// 	// [DesignatedInitializer]
+	// 	// NativeHandle Constructor (CGRect frame);
+	// 	//
+	// 	// // -(instancetype _Nullable)initWithCoder:(NSCoder * _Nonnull)coder __attribute__((objc_designated_initializer));
+	// 	// [Export ("initWithCoder:")]
+	// 	// [DesignatedInitializer]
+	// 	// NativeHandle Constructor (NSCoder coder);
+	// }
 
 	// @interface RiveFallbackFontDescriptor : NSObject
 	[BaseType (typeof(NSObject), Name = "_TtC11RiveRuntime26RiveFallbackFontDescriptor")]

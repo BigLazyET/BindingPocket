@@ -19,7 +19,7 @@
         <PackageId>RiveRuntime.iOS</PackageId>
         <Title>RiveRuntime iOS</Title>
         <Description>Rive iOS Wrapper to support both iOS and macOS.</Description>
-        <VersionPrefix>1.0.1</VersionPrefix>
+        <VersionPrefix>1.0.2</VersionPrefix>
         <PackageProjectUrl>https://github.com/BigLazyET/BindingPocket</PackageProjectUrl>
         <RepositoryUrl>https://github.com/BigLazyET/BindingPocket</RepositoryUrl>
         <IncludeSymbols>true</IncludeSymbols>
@@ -34,6 +34,11 @@
         </PackageReleaseNotes>
     </PropertyGroup>
 
+    <PropertyGroup>
+        <SupportedOSPlatformVersion Condition="$(TargetFramework.Contains('-ios'))">14.0</SupportedOSPlatformVersion>
+        <SupportedOSPlatformVersion Condition="$(TargetFramework.Contains('maccatalyst'))">13.1</SupportedOSPlatformVersion>
+    </PropertyGroup>
+
     <ItemGroup>
         <ObjcBindingApiDefinition Include="ApiDefinition.cs"/>
         <ObjcBindingCoreSource Include="StructsAndEnums.cs"/>
@@ -42,6 +47,9 @@
     <ItemGroup>
         <NativeReference Include="RiveRuntime.xcframework">
             <Kind>Framework</Kind>
+            <SmartLink>False</SmartLink>
+            <ForceLoad>False</ForceLoad>
+            <Frameworks>CoreGraphics Foundation MetalKit UIKit RiveRuntime AudioToolbox AVFoundation CoreAudio Metal QuartzCore CoreFoundation</Frameworks>
         </NativeReference>
     </ItemGroup>
 
