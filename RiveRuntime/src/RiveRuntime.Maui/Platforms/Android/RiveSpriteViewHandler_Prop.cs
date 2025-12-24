@@ -1,3 +1,4 @@
+using System;
 using RiveRuntime.Maui.Extensions;
 using RiveRuntime.Maui.Controls;
 

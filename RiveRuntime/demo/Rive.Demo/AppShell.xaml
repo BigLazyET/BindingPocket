@@ -26,5 +26,10 @@
         Title="UpdateProperties"
         ContentTemplate="{DataTemplate pages:UpdatePropertiesPage}"
         Route="UpdatePropertiesPage" />
+    
+    <ShellContent
+        Title="TouchInput"
+        ContentTemplate="{DataTemplate pages:TouchInputPage}"
+        Route="TouchInputPage" />
 
 </Shell>
