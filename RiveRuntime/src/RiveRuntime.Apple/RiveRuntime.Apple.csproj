@@ -1,17 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFrameworks>net9.0-ios;net9.0-maccatalyst</TargetFrameworks>
-        <RuntimeIdentifiers>ios-arm64;maccatalyst-arm64;maccatalyst-x64</RuntimeIdentifiers>
         <Nullable>enable</Nullable>
         <ImplicitUsings>true</ImplicitUsings>
         <IsBindingProject>true</IsBindingProject>
         <AssemblyName>RiveRuntime.iOS</AssemblyName>
         <RootNamespace>RiveRuntime.iOS</RootNamespace>
-
-        <!--
-          Enable trim analyzers for class libraries.
-          To learn more, see: https://learn.microsoft.com/dotnet/core/deploying/trimming/prepare-libraries-for-trimming
-        -->
         <IsTrimmable>true</IsTrimmable>
     </PropertyGroup>
 
@@ -30,7 +24,7 @@
         <Company>BigLazyET</Company>
 
         <PackageReleaseNotes>
-            修复构造函数的绑定问题，确保正确初始化 RiveViewModel 对象
+            修复绑定问题，提升稳定性。
         </PackageReleaseNotes>
     </PropertyGroup>
 
@@ -47,9 +41,6 @@
     <ItemGroup>
         <NativeReference Include="RiveRuntime.xcframework">
             <Kind>Framework</Kind>
-            <SmartLink>False</SmartLink>
-            <ForceLoad>False</ForceLoad>
-            <Frameworks>CoreGraphics Foundation MetalKit UIKit RiveRuntime AudioToolbox AVFoundation CoreAudio Metal QuartzCore CoreFoundation</Frameworks>
         </NativeReference>
     </ItemGroup>
 

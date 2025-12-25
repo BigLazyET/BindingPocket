@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RiveRuntime", "RiveRuntime"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{90449A3E-3ED4-4BCA-965F-1BABB433BB72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rive.Apple", "RiveRuntime\src\Rive.Apple\Rive.Apple.csproj", "{086B5C73-F684-4973-AFBA-F79F9386849E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiveRuntime.Apple", "RiveRuntime\src\RiveRuntime.Apple\RiveRuntime.Apple.csproj", "{086B5C73-F684-4973-AFBA-F79F9386849E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rive.Droid", "RiveRuntime\src\Rive.Droid\Rive.Droid.csproj", "{8D20CC99-1AB2-4DFF-A8D2-A4A6974FF708}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiveRuntime.Android", "RiveRuntime\src\RiveRuntime.Android\RiveRuntime.Android.csproj", "{8D20CC99-1AB2-4DFF-A8D2-A4A6974FF708}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiveRuntime.Maui", "RiveRuntime\src\RiveRuntime.Maui\RiveRuntime.Maui.csproj", "{35C56F1F-A4F5-4CD2-8DB0-58D7A9BD0CF1}"
 EndProject

@@ -5,8 +5,6 @@ using Foundation;
 using Metal;
 using ObjCRuntime;
 using UIKit;
-using CoreAnimation;
-using CoreGraphics;
 using MetalKit;
 
 namespace ObjCRuntime
@@ -1374,10 +1372,10 @@ namespace RiveRuntime.iOS
 		[Export ("paused")]
 		bool Paused { [Bind ("isPaused")] get; set; }
 
-		// @required @property (readonly, nonatomic) id<CAMetalDrawable> _Nullable currentDrawable;
-		[Abstract]
-		[NullAllowed, Export ("currentDrawable")]
-		ICAMetalDrawable CurrentDrawable { get; }
+		// // @required @property (readonly, nonatomic) id<CAMetalDrawable> _Nullable currentDrawable;
+		// [Abstract]
+		// [NullAllowed, Export ("currentDrawable")]
+		// ICAMetalDrawable CurrentDrawable { get; }
 
 		// @required @property (nonatomic) MTLPixelFormat colorPixelFormat;
 		[Abstract]
@@ -1405,9 +1403,9 @@ namespace RiveRuntime.iOS
 	[BaseType (typeof(RiveMTKView))]
 	interface RiveRendererView
 	{
-		// @property (nonatomic, strong) id<CAMetalDrawable> _Nullable currentDrawableOverride;
-		[NullAllowed, Export ("currentDrawableOverride", ArgumentSemantic.Strong)]
-		ICAMetalDrawable CurrentDrawableOverride { get; set; }
+		// // @property (nonatomic, strong) id<CAMetalDrawable> _Nullable currentDrawableOverride;
+		// [NullAllowed, Export ("currentDrawableOverride", ArgumentSemantic.Strong)]
+		// ICAMetalDrawable CurrentDrawableOverride { get; set; }
 
 		// -(instancetype _Nonnull)initWithFrame:(CGRect)frameRect;
 		[Export ("initWithFrame:")]
@@ -2005,11 +2003,11 @@ namespace RiveRuntime.iOS
 		[Export ("setPreferredFPS:")]
 		void SetPreferredFPS (nint preferredFramesPerSecond);
 
-		// -(void)setPreferredFrameRateRange:(CAFrameRateRange)preferredFrameRateRange __attribute__((availability(visionos, introduced=1))) __attribute__((availability(tvos, introduced=15))) __attribute__((availability(macos, introduced=14))) __attribute__((availability(ios, introduced=15)));
-		// [Introduced (PlatformName.VisionOS, 1, 0)]
-		[TV (15,0), Mac (14,0), iOS (15,0)]
-		[Export ("setPreferredFrameRateRange:")]
-		void SetPreferredFrameRateRange (CAFrameRateRange preferredFrameRateRange);
+		// // -(void)setPreferredFrameRateRange:(CAFrameRateRange)preferredFrameRateRange __attribute__((availability(visionos, introduced=1))) __attribute__((availability(tvos, introduced=15))) __attribute__((availability(macos, introduced=14))) __attribute__((availability(ios, introduced=15)));
+		// // [Introduced (PlatformName.VisionOS, 1, 0)]
+		// [TV (15,0), Mac (14,0), iOS (15,0)]
+		// [Export ("setPreferredFrameRateRange:")]
+		// void SetPreferredFrameRateRange (CAFrameRateRange preferredFrameRateRange);
 
 		// -(void)advanceWithDelta:(double)delta;
 		[Export ("advanceWithDelta:")]
@@ -2115,15 +2113,15 @@ namespace RiveRuntime.iOS
 		[Export ("forwardsListenerEvents")]
 		bool ForwardsListenerEvents { get; set; }
 
-		// -(void)setPreferredFramesPerSecond:(NSInteger)preferredFramesPerSecond;
-		[Export ("setPreferredFramesPerSecond:")]
-		void SetPreferredFramesPerSecond (nint preferredFramesPerSecond);
+		// // -(void)setPreferredFramesPerSecond:(NSInteger)preferredFramesPerSecond;
+		// [Export ("setPreferredFramesPerSecond:")]
+		// void SetPreferredFramesPerSecond (nint preferredFramesPerSecond);
 
-		// -(void)setPreferredFrameRateRange:(CAFrameRateRange)preferredFrameRateRange __attribute__((availability(visionos, introduced=1.0))) __attribute__((availability(tvos, introduced=15.0))) __attribute__((availability(ios, introduced=15.0)));
-		// [Introduced (PlatformName.VisionOS, 1, 0)]
-		[TV (15,0), iOS (15,0)]
-		[Export ("setPreferredFrameRateRange:")]
-		void SetPreferredFrameRateRange (CAFrameRateRange preferredFrameRateRange);
+		// // -(void)setPreferredFrameRateRange:(CAFrameRateRange)preferredFrameRateRange __attribute__((availability(visionos, introduced=1.0))) __attribute__((availability(tvos, introduced=15.0))) __attribute__((availability(ios, introduced=15.0)));
+		// // [Introduced (PlatformName.VisionOS, 1, 0)]
+		// [TV (15,0), iOS (15,0)]
+		// [Export ("setPreferredFrameRateRange:")]
+		// void SetPreferredFrameRateRange (CAFrameRateRange preferredFrameRateRange);
 
 		// -(void)playWithAnimationName:(NSString * _Nullable)animationName loop:(RiveLoop)loop direction:(RiveDirection)direction;
 		[Export ("playWithAnimationName:loop:direction:")]

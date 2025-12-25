@@ -1,12 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net9.0-android</TargetFramework>
-        <RuntimeIdentifiers>android-arm64;android-x64</RuntimeIdentifiers>
         <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
-<!--        <AssemblyName>RiveRuntime.Android</AssemblyName>-->
-<!--        <RootNamespace>RiveRuntime.Android</RootNamespace>-->
+        <AssemblyName>RiveRuntime.Android</AssemblyName>
+        <RootNamespace>RiveRuntime.Android</RootNamespace>
         <!--
           Enable trim analyzers for Android class libraries.
           To learn more, see: https://learn.microsoft.com/dotnet/core/deploying/trimming/prepare-libraries-for-trimming
@@ -33,7 +32,7 @@
         <Company>BigLazyET</Company>
 
         <PackageReleaseNotes>
-            常规修复
+            修复绑定问题，提升稳定性。
         </PackageReleaseNotes>
     </PropertyGroup>
     

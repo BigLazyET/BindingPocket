@@ -25,8 +25,8 @@
 
             <controls:RiveSpriteView Margin="0,40,0,0"
                                      ResourceName="lil_guy"
-                                     Fit="Cover"
-                                     HeightRequest="500"
+                                     Fit="Contain"
+                                     HeightRequest="800"
                                      StateChangedCommand="{Binding StateChangedCommand}" />
         </VerticalStackLayout>
     </ScrollView>
