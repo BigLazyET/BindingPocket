@@ -5,8 +5,7 @@ namespace Rive.Demo.ViewModels;
 
 public partial class UpdatePropertiesViewModel : ObservableObject
 {
-    [ObservableProperty]
-    private string? _artboardName;
+    [ObservableProperty] private string? _artboardName = "Emoji_package";
 
     [RelayCommand]
     private void UpdateProperty(string property)
