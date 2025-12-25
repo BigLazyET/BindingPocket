@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using RiveRuntime.Maui;
+using RiveRuntime.Maui.Enums;
 
 namespace Rive.Demo;
 
@@ -10,7 +11,11 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
-            .UseRiveRuntime()
+            .UseRiveRuntime(options =>
+            {
+                options.AndroidRendererType = RiveAndroidRendererType.Canvas;
+                options.AppleRendererType = RiveAppleRendererType.CoreGraphics;
+            })
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
