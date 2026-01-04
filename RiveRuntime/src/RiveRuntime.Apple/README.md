@@ -1,0 +1,1 @@
+Rive iOS Wrapper to support both iOS and macOS.

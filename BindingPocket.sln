@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RiveRuntime", "RiveRuntime", "{AF48C276-4416-4345-8F27-5F3A06311A11}"
+	ProjectSection(SolutionItems) = preProject
+		RiveRuntime\BindGuide.txt = RiveRuntime\BindGuide.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{90449A3E-3ED4-4BCA-965F-1BABB433BB72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiveRuntime.Apple", "RiveRuntime\src\RiveRuntime.Apple\RiveRuntime.Apple.csproj", "{086B5C73-F684-4973-AFBA-F79F9386849E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiveRuntime.Android", "RiveRuntime\src\RiveRuntime.Android\RiveRuntime.Android.csproj", "{8D20CC99-1AB2-4DFF-A8D2-A4A6974FF708}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiveRuntime.Maui", "RiveRuntime\src\RiveRuntime.Maui\RiveRuntime.Maui.csproj", "{35C56F1F-A4F5-4CD2-8DB0-58D7A9BD0CF1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "demo", "demo", "{B3490B5D-7794-4971-9322-884E36A0901F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rive.Demo", "RiveRuntime\demo\Rive.Demo\Rive.Demo.csproj", "{E7B8D3EE-0A41-43B8-8CB6-A72CDAE7D817}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{90449A3E-3ED4-4BCA-965F-1BABB433BB72} = {AF48C276-4416-4345-8F27-5F3A06311A11}
+		{086B5C73-F684-4973-AFBA-F79F9386849E} = {90449A3E-3ED4-4BCA-965F-1BABB433BB72}
+		{8D20CC99-1AB2-4DFF-A8D2-A4A6974FF708} = {90449A3E-3ED4-4BCA-965F-1BABB433BB72}
+		{35C56F1F-A4F5-4CD2-8DB0-58D7A9BD0CF1} = {90449A3E-3ED4-4BCA-965F-1BABB433BB72}
+		{B3490B5D-7794-4971-9322-884E36A0901F} = {AF48C276-4416-4345-8F27-5F3A06311A11}
+		{E7B8D3EE-0A41-43B8-8CB6-A72CDAE7D817} = {B3490B5D-7794-4971-9322-884E36A0901F}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{086B5C73-F684-4973-AFBA-F79F9386849E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{086B5C73-F684-4973-AFBA-F79F9386849E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{086B5C73-F684-4973-AFBA-F79F9386849E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{086B5C73-F684-4973-AFBA-F79F9386849E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D20CC99-1AB2-4DFF-A8D2-A4A6974FF708}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D20CC99-1AB2-4DFF-A8D2-A4A6974FF708}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D20CC99-1AB2-4DFF-A8D2-A4A6974FF708}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D20CC99-1AB2-4DFF-A8D2-A4A6974FF708}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35C56F1F-A4F5-4CD2-8DB0-58D7A9BD0CF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35C56F1F-A4F5-4CD2-8DB0-58D7A9BD0CF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35C56F1F-A4F5-4CD2-8DB0-58D7A9BD0CF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35C56F1F-A4F5-4CD2-8DB0-58D7A9BD0CF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7B8D3EE-0A41-43B8-8CB6-A72CDAE7D817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7B8D3EE-0A41-43B8-8CB6-A72CDAE7D817}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7B8D3EE-0A41-43B8-8CB6-A72CDAE7D817}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7B8D3EE-0A41-43B8-8CB6-A72CDAE7D817}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

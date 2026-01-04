@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>net9.0-ios;net9.0-maccatalyst</TargetFrameworks>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>true</ImplicitUsings>
+        <IsBindingProject>true</IsBindingProject>
+        <AssemblyName>RiveRuntime.iOS</AssemblyName>
+        <RootNamespace>RiveRuntime.iOS</RootNamespace>
+        <IsTrimmable>true</IsTrimmable>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageId>RiveRuntime.iOS</PackageId>
+        <Title>RiveRuntime iOS</Title>
+        <Description>Rive iOS Wrapper to support both iOS and macOS.</Description>
+        <VersionPrefix>1.0.2</VersionPrefix>
+        <PackageProjectUrl>https://github.com/BigLazyET/BindingPocket</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/BigLazyET/BindingPocket</RepositoryUrl>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <Authors>BigLazyET</Authors>
+        <Company>BigLazyET</Company>
+
+        <PackageReleaseNotes>
+            修复绑定问题，提升稳定性。
+        </PackageReleaseNotes>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <SupportedOSPlatformVersion Condition="$(TargetFramework.Contains('-ios'))">14.0</SupportedOSPlatformVersion>
+        <SupportedOSPlatformVersion Condition="$(TargetFramework.Contains('maccatalyst'))">13.1</SupportedOSPlatformVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ObjcBindingApiDefinition Include="ApiDefinition.cs"/>
+        <ObjcBindingCoreSource Include="StructsAndEnums.cs"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <NativeReference Include="RiveRuntime.xcframework">
+            <Kind>Framework</Kind>
+        </NativeReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="/"/>
+    </ItemGroup>
+</Project>

@@ -1,0 +1,117 @@
+﻿<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+
+<!--  <attr path="/api/package[@name='app.rive.runtime.kotlin']"-->
+<!--        name="managedName">Rive.Droid-->
+<!--  </attr>-->
+
+<!--  <attr path="/api/package[@name='app.rive.runtime.kotlin.core']"-->
+<!--        name="managedName">Rive.Droid.Core-->
+<!--  </attr>-->
+
+<!--  <attr path="/api/package[@name='app.rive.runtime.kotlin.core.errors']"-->
+<!--        name="managedName">Rive.Droid.Core.Errors-->
+<!--  </attr>-->
+
+<!--  <attr path="/api/package[@name='app.rive.runtime.kotlin.controllers']"-->
+<!--        name="managedName">Rive.Droid.Controllers-->
+<!--  </attr>-->
+
+<!--  <attr path="/api/package[@name='app.rive.runtime.kotlin.renderers']"-->
+<!--        name="managedName">Rive.Droid.Renderers-->
+<!--  </attr>-->
+
+<!--  <remove-node path="/api/package[@name='app.rive.runtime.kotlin']/class[@name='RiveInitializer']"/>-->
+
+<!--  <remove-node path="/api/package[@name='app.rive.runtime.kotlin']/class[@name='RiveFileRequest']"/>-->
+
+<!--  <remove-node path="/api/package[@name='app.rive.runtime.kotlin.core']/class[@name='BytesRequest']"/>-->
+
+  <attr path="/api/package[@name='app.rive.runtime.kotlin.core']/class[@name='Loop']/field[@name='LOOP']"
+        name="managedName">Loop2
+  </attr>
+  
+  <attr path="/api/package[@name='app.rive.runtime.kotlin.core']/class[@name='ViewModelBooleanProperty']/method[@name='nativeGetValue' and count(parameter)=0]"
+        name="managedName">NativeGetBooleanValue
+  </attr>
+  
+  <attr path="/api/package[@name='app.rive.runtime.kotlin.core']/class[@name='ViewModelArtboardProperty']/method[@name='nativeGetValue' and count(parameter)=0]"
+        name="managedName">NativeGetArtboardValue
+  </attr>
+  
+  <attr path="/api/package[@name='app.rive.runtime.kotlin.core']/class[@name='ViewModelColorProperty']/method[@name='nativeGetValue' and count(parameter)=0]"
+        name="managedName">NativeGetColorValue
+  </attr>
+  
+  <attr path="/api/package[@name='app.rive.runtime.kotlin.core']/class[@name='ViewModelNumberProperty']/method[@name='nativeGetValue' and count(parameter)=0]"
+        name="managedName">NativeGetNumberValue
+  </attr>
+  
+  <attr path="/api/package[@name='app.rive.runtime.kotlin.core']/class[@name='ViewModelListProperty']/method[@name='nativeGetValue' and count(parameter)=0]"
+        name="managedName">NativeGetListValue
+  </attr>
+  
+  <attr path="/api/package[@name='app.rive.runtime.kotlin.core']/class[@name='ViewModelStringProperty']/method[@name='nativeGetValue' and count(parameter)=0]"
+        name="managedName">NativeGetStringValue
+  </attr>
+  
+  <attr path="/api/package[@name='app.rive.runtime.kotlin.core']/class[@name='ViewModelTriggerProperty']/method[@name='nativeGetValue' and count(parameter)=0]"
+        name="managedName">NativeGetTriggerValue
+  </attr>
+  
+  <attr path="/api/package[@name='app.rive.runtime.kotlin.core']/class[@name='ViewModelEnumProperty']/method[@name='nativeGetValue' and count(parameter)=0]"
+        name="managedName">NativeGetEnumValue
+  </attr>
+  
+  <attr path="/api/package[@name='app.rive.runtime.kotlin.core']/class[@name='ViewModelImageProperty']/method[@name='nativeGetValue' and count(parameter)=0]"
+        name="managedName">NativeGetImageValue
+  </attr>
+
+  <attr path="/api/package[@name='app.rive.runtime.kotlin']/class[@name='RiveInitializer']/method[@name='create' and count(parameter)=1 and parameter[1][@type='android.content.Context']]"
+        name="managedName">CreateWithContext
+  </attr>
+  
+  <!-- FontAsset.Companion.construct(long, CommandQueue) -> managed Construct(Object?, CommandQueue) -->
+  <attr path="/api/package[@name='app.rive']/class[@name='FontAsset.Companion']/method[@name='construct-5E6tRKQ' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='app.rive.core.CommandQueue']]"
+        name="managedName">Construct</attr>
+
+  <!-- FontAsset.Companion.delete(CommandQueue, long) -> managed Delete(CommandQueue, Object?) -->
+  <attr path="/api/package[@name='app.rive']/class[@name='FontAsset.Companion']/method[@name='delete-8-RWjZU' and count(parameter)=2 and parameter[1][@type='app.rive.core.CommandQueue'] and parameter[2][@type='long']]"
+        name="managedName">Delete</attr>
+
+  <!-- FontAsset.Companion.register(CommandQueue, String, long) -> managed Register(CommandQueue, String, Object?) -->
+  <attr path="/api/package[@name='app.rive']/class[@name='FontAsset.Companion']/method[@name='register-AltPSKk' and count(parameter)=3 and parameter[1][@type='app.rive.core.CommandQueue'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='long']]"
+        name="managedName">Register</attr>
+  
+  <!-- ImageAsset.Companion.construct(long, CommandQueue) -> managed Construct(Object?, CommandQueue) -->
+  <attr path="/api/package[@name='app.rive']/class[@name='ImageAsset.Companion']/method[@name='construct-adYM1ho' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='app.rive.core.CommandQueue']]"
+        name="managedName">Construct</attr>
+
+  <!-- ImageAsset.Companion.delete(CommandQueue, long) -> managed Delete(CommandQueue, Object?) -->
+  <attr path="/api/package[@name='app.rive']/class[@name='ImageAsset.Companion']/method[@name='delete-QieQ09U' and count(parameter)=2 and parameter[1][@type='app.rive.core.CommandQueue'] and parameter[2][@type='long']]"
+        name="managedName">Delete</attr>
+
+  <!-- ImageAsset.Companion.register(CommandQueue, String, long) -> managed Register(CommandQueue, String, Object?) -->
+  <attr path="/api/package[@name='app.rive']/class[@name='ImageAsset.Companion']/method[@name='register-jp8Sumo' and count(parameter)=3 and parameter[1][@type='app.rive.core.CommandQueue'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='long']]"
+        name="managedName">Register</attr>
+  
+  <!-- AudioAsset.Companion.construct(long, CommandQueue) -> managed Construct(Object?, CommandQueue) -->
+  <attr path="/api/package[@name='app.rive']/class[@name='AudioAsset.Companion']/method[@name='construct-QxJutAs' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='app.rive.core.CommandQueue']]"
+        name="managedName">Construct</attr>
+
+  <!-- AudioAsset.Companion.delete(CommandQueue, long) -> managed Delete(CommandQueue, Object?) -->
+  <attr path="/api/package[@name='app.rive']/class[@name='AudioAsset.Companion']/method[@name='delete-4kKS7jM' and count(parameter)=2 and parameter[1][@type='app.rive.core.CommandQueue'] and parameter[2][@type='long']]"
+        name="managedName">Delete</attr>
+
+  <!-- AudioAsset.Companion.register(CommandQueue, String, long) -> managed Register(CommandQueue, String, Object?) -->
+  <attr path="/api/package[@name='app.rive']/class[@name='AudioAsset.Companion']/method[@name='register-d3xxSlE' and count(parameter)=3 and parameter[1][@type='app.rive.core.CommandQueue'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='long']]"
+        name="managedName">Register</attr>
+  
+  
+</metadata>

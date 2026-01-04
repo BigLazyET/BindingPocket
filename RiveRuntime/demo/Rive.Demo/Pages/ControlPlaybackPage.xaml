@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:RiveRuntime.Maui.Controls;assembly=RiveRuntime.Maui"
+             x:Class="Rive.Demo.Pages.ControlPlaybackPage">
+    <ScrollView>
+        <VerticalStackLayout Spacing="20">
+            <controls:RiveSpriteView x:Name="RivePlayer"
+                                     Margin="0,20,0,0"
+                                     AutoPlay="False"
+                                     Loop="Loop"
+                                     ResourceName="runner"
+                                     Fit="Cover"
+                                     AnimationName="run"
+                                     HeightRequest="500" />
+
+            <HorizontalStackLayout Spacing="10"
+                                   HorizontalOptions="Center">
+
+                <Button Text="Play"
+                        Command="{Binding PlayCommand, Source={x:Reference RivePlayer}, x:DataType=controls:RiveSpriteView}" />
+
+                <Button Text="Pause"
+                        Command="{Binding PauseCommand, Source={x:Reference RivePlayer}, x:DataType=controls:RiveSpriteView}" />
+
+                <Button Text="Stop"
+                        Command="{Binding StopCommand, Source={x:Reference RivePlayer}, x:DataType=controls:RiveSpriteView}" />
+
+                <Button Text="Reset"
+                        Command="{Binding ResetCommand, Source={x:Reference RivePlayer}, x:DataType=controls:RiveSpriteView}" />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

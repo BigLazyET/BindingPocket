@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Rive.Demo.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Rive.Demo"
+    xmlns:pages="clr-namespace:Rive.Demo.Pages"
+    Title="Rive.Demo">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    
+    <ShellContent
+        Title="StateMachine"
+        ContentTemplate="{DataTemplate pages:StateMachinePage}"
+        Route="StateMachinePage" />
+    
+    <ShellContent
+        Title="Playback"
+        ContentTemplate="{DataTemplate pages:ControlPlaybackPage}"
+        Route="ControlPlaybackPage" />
+    
+    <ShellContent
+        Title="UpdateProperties"
+        ContentTemplate="{DataTemplate pages:UpdatePropertiesPage}"
+        Route="UpdatePropertiesPage" />
+    
+    <ShellContent
+        Title="TouchInput"
+        ContentTemplate="{DataTemplate pages:TouchInputPage}"
+        Route="TouchInputPage" />
+
+</Shell>

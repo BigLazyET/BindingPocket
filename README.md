@@ -1,2 +1,2 @@
 # BindingPocket
-Maui BInding Projects 
+Maui Bindings for iOS and Android
