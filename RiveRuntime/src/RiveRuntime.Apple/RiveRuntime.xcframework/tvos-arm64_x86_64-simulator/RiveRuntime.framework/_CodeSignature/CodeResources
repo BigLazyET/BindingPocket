@@ -78,7 +78,7 @@
 		</data>
 		<key>Headers/RiveRuntime-Swift.h</key>
 		<data>
-		5QHPbAMr1zoE5FAJg5WuY976LTw=
+		jMuChFXtreiRooLzb73LPDJfvUc=
 		</data>
 		<key>Headers/RiveRuntime.h</key>
 		<data>
@@ -102,15 +102,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		OMh7cFKIf+7C/EjsOEPCHlAgrrk=
+		yv4eyAUhFYMsvIAgnIzrTZsEYfc=
 		</data>
 		<key>Modules/RiveRuntime.swiftmodule/arm64-apple-tvos-simulator.abi.json</key>
 		<data>
-		C4RYvkI79YkjzspfjE+6uAV1fqY=
+		qD4t+Tu6kMxUIlDONLP5r/YFhHU=
 		</data>
 		<key>Modules/RiveRuntime.swiftmodule/arm64-apple-tvos-simulator.private.swiftinterface</key>
 		<data>
-		tjxVToo9Bl3DV2VxUv36SpRs/5I=
+		8YoYLHopQlHXxAUwQGb60lQbXsg=
 		</data>
 		<key>Modules/RiveRuntime.swiftmodule/arm64-apple-tvos-simulator.swiftdoc</key>
 		<data>
@@ -118,19 +118,19 @@
 		</data>
 		<key>Modules/RiveRuntime.swiftmodule/arm64-apple-tvos-simulator.swiftinterface</key>
 		<data>
-		tjxVToo9Bl3DV2VxUv36SpRs/5I=
+		8YoYLHopQlHXxAUwQGb60lQbXsg=
 		</data>
 		<key>Modules/RiveRuntime.swiftmodule/arm64-apple-tvos-simulator.swiftmodule</key>
 		<data>
-		t4zpwP8p3j30Jj/W2I3FNQmZhPQ=
+		pAcse7Kpnej1rQWwo7ADRroC/Ec=
 		</data>
 		<key>Modules/RiveRuntime.swiftmodule/x86_64-apple-tvos-simulator.abi.json</key>
 		<data>
-		C4RYvkI79YkjzspfjE+6uAV1fqY=
+		qD4t+Tu6kMxUIlDONLP5r/YFhHU=
 		</data>
 		<key>Modules/RiveRuntime.swiftmodule/x86_64-apple-tvos-simulator.private.swiftinterface</key>
 		<data>
-		Q8be9IoYI5o5gSr3UNLIWjK9t5A=
+		vahgyxLvGN6WtegP11NsNvDXDfQ=
 		</data>
 		<key>Modules/RiveRuntime.swiftmodule/x86_64-apple-tvos-simulator.swiftdoc</key>
 		<data>
@@ -138,11 +138,11 @@
 		</data>
 		<key>Modules/RiveRuntime.swiftmodule/x86_64-apple-tvos-simulator.swiftinterface</key>
 		<data>
-		Q8be9IoYI5o5gSr3UNLIWjK9t5A=
+		vahgyxLvGN6WtegP11NsNvDXDfQ=
 		</data>
 		<key>Modules/RiveRuntime.swiftmodule/x86_64-apple-tvos-simulator.swiftmodule</key>
 		<data>
-		ABW5drWMi+A/URFnh6r69rDiFo0=
+		Os7ALJU40POeaZ7+9q8QaBEaOD4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -289,7 +289,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4UJlxTs+u8a5HgoQmjSG0kJ6xhumsEGSSIn2M+493cY=
+			xLUSbZtJ2jwS9xSR5fSXtyYGDANf5e6YgHL6LsqwODQ=
 			</data>
 		</dict>
 		<key>Headers/RiveRuntime.h</key>
@@ -331,14 +331,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Bi0/EY7QPQKwI4kzr4+9hNT+saAcp5TdPzohfqtBx80=
+			wnFFPUT6recNesJzlUisFGycScE/cqTcZbQ8R1zchGU=
 			</data>
 		</dict>
 		<key>Modules/RiveRuntime.swiftmodule/arm64-apple-tvos-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KBRlnBMuw1xaGKLNk30WBTXxhxGuUPKcTzpBPo1auuc=
+			RcSufjzLVGAgLWR9q9GoM0JXrSEQ1TLilO2V00bZDzQ=
 			</data>
 		</dict>
 		<key>Modules/RiveRuntime.swiftmodule/arm64-apple-tvos-simulator.swiftdoc</key>
@@ -352,28 +352,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KBRlnBMuw1xaGKLNk30WBTXxhxGuUPKcTzpBPo1auuc=
+			RcSufjzLVGAgLWR9q9GoM0JXrSEQ1TLilO2V00bZDzQ=
 			</data>
 		</dict>
 		<key>Modules/RiveRuntime.swiftmodule/arm64-apple-tvos-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nTQ8TAVkA/omUdXl5liV/MehKeY+OJQSvAs0VV+hCP0=
+			jeY9Ud0cA3jZflZ6ay49IWvh/rS78WIC97Lf01qShkg=
 			</data>
 		</dict>
 		<key>Modules/RiveRuntime.swiftmodule/x86_64-apple-tvos-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Bi0/EY7QPQKwI4kzr4+9hNT+saAcp5TdPzohfqtBx80=
+			wnFFPUT6recNesJzlUisFGycScE/cqTcZbQ8R1zchGU=
 			</data>
 		</dict>
 		<key>Modules/RiveRuntime.swiftmodule/x86_64-apple-tvos-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			P3g9tUpguJL1GRD+8iMXCOacGXjB5XttLLj55RvgXCE=
+			vN24ZH2GenEhFek8YdYfX70Ia81zxx9iohKQFN3tWYM=
 			</data>
 		</dict>
 		<key>Modules/RiveRuntime.swiftmodule/x86_64-apple-tvos-simulator.swiftdoc</key>
@@ -387,14 +387,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			P3g9tUpguJL1GRD+8iMXCOacGXjB5XttLLj55RvgXCE=
+			vN24ZH2GenEhFek8YdYfX70Ia81zxx9iohKQFN3tWYM=
 			</data>
 		</dict>
 		<key>Modules/RiveRuntime.swiftmodule/x86_64-apple-tvos-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rAtY496lj/1SmmjmCy8X8vOdJa6deXge5LYMrAxUrpY=
+			DUL39esnUdSu+0yfFquJr+RW5Yau4PuKDKEaSPFkB7o=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

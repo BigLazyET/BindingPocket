@@ -46,6 +46,7 @@
 
     <ItemGroup Condition="$(TargetFramework.Contains('-ios')) OR $(TargetFramework.Contains('maccatalyst'))">
         <ProjectReference Include="..\RiveRuntime.Apple\RiveRuntime.Apple.csproj" />
+<!--        <PackageReference Include="RiveRuntime.iOS" Version="1.0.2" />-->
     </ItemGroup>
     
 </Project>

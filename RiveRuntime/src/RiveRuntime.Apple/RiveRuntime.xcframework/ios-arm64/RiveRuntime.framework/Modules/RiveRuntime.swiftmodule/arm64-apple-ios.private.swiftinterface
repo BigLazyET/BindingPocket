@@ -29,7 +29,7 @@ extension RiveRuntime.RiveFile {
   }
   @_Concurrency.MainActor @preconcurrency public var offscreenBehavior: RiveRuntime.RiveView.OffscreenBehavior
   @objc @_Concurrency.MainActor @preconcurrency weak public var playerDelegate: (any RiveRuntime.RivePlayerDelegate)?
-  @_Concurrency.MainActor @preconcurrency weak public var stateMachineDelegate: (any RiveRuntime.RiveStateMachineDelegate)?
+  @objc @_Concurrency.MainActor @preconcurrency weak public var stateMachineDelegate: (any RiveRuntime.RiveStateMachineDelegate)?
   @_Concurrency.MainActor @preconcurrency public var showFPS: Swift.Bool {
     get
     set

@@ -53,6 +53,8 @@ public partial class RiveSpriteViewHandler() : ViewHandler<RiveSpriteView, RiveV
         
         riveViewModel.VirtualView.SetTarget(VirtualView);
         riveView = riveViewModel.CreateRiveView;
+        
+        
         return  riveView;
     }
     

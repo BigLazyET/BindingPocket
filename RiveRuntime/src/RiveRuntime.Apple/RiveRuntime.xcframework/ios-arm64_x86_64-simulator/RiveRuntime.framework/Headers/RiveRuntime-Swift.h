@@ -653,6 +653,7 @@ typedef SWIFT_ENUM(NSInteger, RiveTouchEvent, open) {
 SWIFT_CLASS("_TtC11RiveRuntime8RiveView")
 @interface RiveView : RiveRendererView
 @property (nonatomic, weak) id <RivePlayerDelegate> _Nullable playerDelegate;
+@property (nonatomic, weak) id <RiveStateMachineDelegate> _Nullable stateMachineDelegate;
 @property (nonatomic) CGRect bounds;
 @property (nonatomic) CGRect frame;
 /// Minimalist constructor, call <code>.configure</code> to customize the <code>RiveView</code> later.
@@ -1619,6 +1620,7 @@ typedef SWIFT_ENUM(NSInteger, RiveTouchEvent, open) {
 SWIFT_CLASS("_TtC11RiveRuntime8RiveView")
 @interface RiveView : RiveRendererView
 @property (nonatomic, weak) id <RivePlayerDelegate> _Nullable playerDelegate;
+@property (nonatomic, weak) id <RiveStateMachineDelegate> _Nullable stateMachineDelegate;
 @property (nonatomic) CGRect bounds;
 @property (nonatomic) CGRect frame;
 /// Minimalist constructor, call <code>.configure</code> to customize the <code>RiveView</code> later.

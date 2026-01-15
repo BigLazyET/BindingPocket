@@ -51,8 +51,11 @@ public partial class RiveSpriteViewHandler() : ViewHandler<RiveSpriteView, RiveV
         if (!string.IsNullOrWhiteSpace(VirtualView.AnimationName))
             riveViewModel.RiveModel?.SetAnimation(VirtualView.AnimationName, out _);
         
-        // riveViewModel.VirtualView.SetTarget(VirtualView);
         riveView = riveViewModel.CreateRiveView;
+        var stateMachineDelegate = new AppleRiveStateMachineDelegate();
+        stateMachineDelegate.VirtualView.SetTarget(VirtualView);
+        riveView.stateMachineDelegate = stateMachineDelegate;
+        
         return  riveView;
     }
     

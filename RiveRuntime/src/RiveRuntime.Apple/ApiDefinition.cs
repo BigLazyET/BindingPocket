@@ -1977,6 +1977,14 @@ namespace RiveRuntime.iOS
 		// @property (nonatomic, weak) id<RivePlayerDelegate> _Nullable playerDelegate;
 		[NullAllowed, Export ("playerDelegate", ArgumentSemantic.Weak)]
 		NSObject WeakPlayerDelegate { get; set; }
+		
+		[Export("stateMachineDelegate", ArgumentSemantic.Weak)] 
+		[NullAllowed]
+		NSObject WeakStateMachineDelegate { get; set; }
+		
+		[Wrap("WeakStateMachineDelegate")] 
+		[NullAllowed]
+		RiveStateMachineDelegate stateMachineDelegate { get; set; }
 
 		// @property (nonatomic) CGRect bounds;
 		[Export ("bounds", ArgumentSemantic.Assign)]

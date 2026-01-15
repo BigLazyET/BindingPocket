@@ -78,7 +78,7 @@
 		</data>
 		<key>Headers/RiveRuntime-Swift.h</key>
 		<data>
-		oO00gbNxlZrqZvy4nAlSt5AjHDw=
+		kRmTI/YAmFdXNL8DF1gxP9R86AE=
 		</data>
 		<key>Headers/RiveRuntime.h</key>
 		<data>
@@ -102,15 +102,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		WavxE0P1WHaiBf8nNsi/jTp3Xj4=
+		6z/5TmyMGxHqKuppfjP5WkRaXtc=
 		</data>
 		<key>Modules/RiveRuntime.swiftmodule/arm64-apple-xros-simulator.abi.json</key>
 		<data>
-		28ikVnhZSnupxg/UNGZ2T3A5Q84=
+		HDCQt78t1oLfmHT2bUEhM613qwk=
 		</data>
 		<key>Modules/RiveRuntime.swiftmodule/arm64-apple-xros-simulator.private.swiftinterface</key>
 		<data>
-		iORJodWlAPbKaS3F58vmXD+0GdM=
+		a9VTyMSyUZWVVdMXtDcaBtMQz/s=
 		</data>
 		<key>Modules/RiveRuntime.swiftmodule/arm64-apple-xros-simulator.swiftdoc</key>
 		<data>
@@ -118,19 +118,19 @@
 		</data>
 		<key>Modules/RiveRuntime.swiftmodule/arm64-apple-xros-simulator.swiftinterface</key>
 		<data>
-		iORJodWlAPbKaS3F58vmXD+0GdM=
+		a9VTyMSyUZWVVdMXtDcaBtMQz/s=
 		</data>
 		<key>Modules/RiveRuntime.swiftmodule/arm64-apple-xros-simulator.swiftmodule</key>
 		<data>
-		LQz/ZdHO1m83PMudUmFZCZF/rjs=
+		6e5Mfzdv0juQ2iQUS0JqLGzeCGU=
 		</data>
 		<key>Modules/RiveRuntime.swiftmodule/x86_64-apple-xros-simulator.abi.json</key>
 		<data>
-		28ikVnhZSnupxg/UNGZ2T3A5Q84=
+		HDCQt78t1oLfmHT2bUEhM613qwk=
 		</data>
 		<key>Modules/RiveRuntime.swiftmodule/x86_64-apple-xros-simulator.private.swiftinterface</key>
 		<data>
-		n46YvtaTeE4pZvU6FIVhcxO2YUM=
+		t/+zWiqGCN/SBdyHHfjjwKJ52Sk=
 		</data>
 		<key>Modules/RiveRuntime.swiftmodule/x86_64-apple-xros-simulator.swiftdoc</key>
 		<data>
@@ -138,11 +138,11 @@
 		</data>
 		<key>Modules/RiveRuntime.swiftmodule/x86_64-apple-xros-simulator.swiftinterface</key>
 		<data>
-		n46YvtaTeE4pZvU6FIVhcxO2YUM=
+		t/+zWiqGCN/SBdyHHfjjwKJ52Sk=
 		</data>
 		<key>Modules/RiveRuntime.swiftmodule/x86_64-apple-xros-simulator.swiftmodule</key>
 		<data>
-		wKbd65oDUikhf2gQIzh0fNou86A=
+		nAVFE49eCVhqep+JkAW/QMWWtTE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -289,7 +289,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JU/lO/eN1DZrf6l7ogLcExnI9yzbVZxOfivf2r/uWrY=
+			E2BjcFb5MqClond7WkidQciXzVu6uIqbp2zAbab9u+o=
 			</data>
 		</dict>
 		<key>Headers/RiveRuntime.h</key>
@@ -331,14 +331,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			X7myrVkqVeEgdgjxFglCn+rdoDFYhDVIZYo2bFqkGb8=
+			/d1/p+9Lb2AO+/JozlmUwyGZ7fcb/+q0/LOuODjzjno=
 			</data>
 		</dict>
 		<key>Modules/RiveRuntime.swiftmodule/arm64-apple-xros-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y+1HhZC/Oev8rJyLli8CNsODanV9z1Hx3iA39GXLOBw=
+			iGrV/asH6AIaH4jCdnkVdqjOw37hlqCn/nGQXOWqeH8=
 			</data>
 		</dict>
 		<key>Modules/RiveRuntime.swiftmodule/arm64-apple-xros-simulator.swiftdoc</key>
@@ -352,28 +352,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y+1HhZC/Oev8rJyLli8CNsODanV9z1Hx3iA39GXLOBw=
+			iGrV/asH6AIaH4jCdnkVdqjOw37hlqCn/nGQXOWqeH8=
 			</data>
 		</dict>
 		<key>Modules/RiveRuntime.swiftmodule/arm64-apple-xros-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			69hus9BUKyTlyqPZcn/t4pnYlCGpQcu1yKYhlozP6ts=
+			H0lg6ubVNIuePy4jJS0t2FBg2J7f01W77XpC5IGm8OE=
 			</data>
 		</dict>
 		<key>Modules/RiveRuntime.swiftmodule/x86_64-apple-xros-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			X7myrVkqVeEgdgjxFglCn+rdoDFYhDVIZYo2bFqkGb8=
+			/d1/p+9Lb2AO+/JozlmUwyGZ7fcb/+q0/LOuODjzjno=
 			</data>
 		</dict>
 		<key>Modules/RiveRuntime.swiftmodule/x86_64-apple-xros-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			p7Xifk4rKBDsO2wTIoty6uDfikey2K2RyEXxsfYv9Nw=
+			ynay0xtYbNtcvqeDlYkWQgJXT5FVRcARl9cDAqDcqkU=
 			</data>
 		</dict>
 		<key>Modules/RiveRuntime.swiftmodule/x86_64-apple-xros-simulator.swiftdoc</key>
@@ -387,14 +387,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			p7Xifk4rKBDsO2wTIoty6uDfikey2K2RyEXxsfYv9Nw=
+			ynay0xtYbNtcvqeDlYkWQgJXT5FVRcARl9cDAqDcqkU=
 			</data>
 		</dict>
 		<key>Modules/RiveRuntime.swiftmodule/x86_64-apple-xros-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xgVF37MQ2z4GJnoGnDOveXW7VIqt2tfITKbAKHETcHg=
+			tExjXX4xettouSAI429W/5tp79nRFhGyzSHXbiAVz0g=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
