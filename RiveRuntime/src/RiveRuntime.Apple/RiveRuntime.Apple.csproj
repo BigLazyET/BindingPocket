@@ -13,7 +13,7 @@
         <PackageId>RiveRuntime.iOS</PackageId>
         <Title>RiveRuntime iOS</Title>
         <Description>Rive iOS Wrapper to support both iOS and macOS.</Description>
-        <VersionPrefix>1.0.2</VersionPrefix>
+        <VersionPrefix>1.0.3</VersionPrefix>
         <PackageProjectUrl>https://github.com/BigLazyET/BindingPocket</PackageProjectUrl>
         <RepositoryUrl>https://github.com/BigLazyET/BindingPocket</RepositoryUrl>
         <IncludeSymbols>true</IncludeSymbols>

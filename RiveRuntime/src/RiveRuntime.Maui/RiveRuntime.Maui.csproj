@@ -16,7 +16,7 @@
         <PackageId>RiveRuntime.Maui</PackageId>
         <Title>RiveRuntime Maui</Title>
         <Description>Rive animations in Maui using iOS/Android/macOS runtimes</Description>
-        <VersionPrefix>1.0.0</VersionPrefix>
+        <VersionPrefix>1.0.1</VersionPrefix>
         <PackageProjectUrl>https://github.com/BigLazyET/BindingPocket</PackageProjectUrl>
         <RepositoryUrl>https://github.com/BigLazyET/BindingPocket</RepositoryUrl>
         <IncludeSymbols>true</IncludeSymbols>
@@ -27,7 +27,7 @@
         <Company>BigLazyET</Company>
 
         <PackageReleaseNotes>
-            RiveRuntime.Maui 1.0.0 发布，支持在 .NET MAUI 应用中使用 Rive 动画，涵盖 iOS、Android 和 macOS 平台。
+            修复iOS平台无法监控RiveEvent和RiveStateMachineInput的问题。
         </PackageReleaseNotes>
     </PropertyGroup>
 
@@ -41,12 +41,19 @@
     </ItemGroup>
 
     <ItemGroup Condition="'$(TargetFramework)' == 'net9.0-android'">
-      <ProjectReference Include="..\RiveRuntime.Android\RiveRuntime.Android.csproj" />
+<!--      <ProjectReference Include="..\RiveRuntime.Android\RiveRuntime.Android.csproj" />-->
+        <PackageReference Include="RiveRuntime.Android" Version="1.0.2" />
     </ItemGroup>
 
     <ItemGroup Condition="$(TargetFramework.Contains('-ios')) OR $(TargetFramework.Contains('maccatalyst'))">
         <ProjectReference Include="..\RiveRuntime.Apple\RiveRuntime.Apple.csproj" />
-<!--        <PackageReference Include="RiveRuntime.iOS" Version="1.0.2" />-->
+<!--        <PackageReference Include="RiveRuntime.iOS" Version="1.0.3" />-->
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Platforms\Android\Alternative\CustomRiveView.cs">
+        <ExcludeFromCurrentConfiguration>false</ExcludeFromCurrentConfiguration>
+      </Compile>
     </ItemGroup>
     
 </Project>
