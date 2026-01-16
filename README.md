@@ -19,9 +19,10 @@ Bindings around the native Rive runtimes to support iOS, Android, and macOS in .
 
 ### Getting started
 - Install the NuGet package: [RiveRuntime.Maui](https://www.nuget.org/packages/RiveRuntime.Maui/)
-- In MauiProgram.cs, call `UseRive()` on the `MauiAppBuilder`
+- In MauiProgram.cs, call `UseRiveRuntime()` on the `MauiAppBuilder`, You can change the rendertype via RenderOptions
 - Minimum iOS target: 14.0; macOS target: 15.0
 - Add your `.riv` assets to `Resources/Images`
+- See the [demo](./RiveRuntime/demo/Rive.Demo) for more details
 
 ## 2. One or more additional bindings
 More bindings are coming soon.
