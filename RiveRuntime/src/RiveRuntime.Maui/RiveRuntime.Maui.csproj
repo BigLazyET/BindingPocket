@@ -16,7 +16,7 @@
         <PackageId>RiveRuntime.Maui</PackageId>
         <Title>RiveRuntime Maui</Title>
         <Description>Rive animations in Maui using iOS/Android/macOS runtimes</Description>
-        <VersionPrefix>1.0.1</VersionPrefix>
+        <VersionPrefix>1.0.2</VersionPrefix>
         <PackageProjectUrl>https://github.com/BigLazyET/BindingPocket</PackageProjectUrl>
         <RepositoryUrl>https://github.com/BigLazyET/BindingPocket</RepositoryUrl>
         <IncludeSymbols>true</IncludeSymbols>
@@ -27,7 +27,7 @@
         <Company>BigLazyET</Company>
 
         <PackageReleaseNotes>
-            修复iOS平台无法监控RiveEvent和RiveStateMachineInput的问题。
+            修复Android平台下Accessing disposed C++ object FallbackAssetLoader导致的崩溃问题。
         </PackageReleaseNotes>
     </PropertyGroup>
 
@@ -41,19 +41,13 @@
     </ItemGroup>
 
     <ItemGroup Condition="'$(TargetFramework)' == 'net9.0-android'">
-<!--      <ProjectReference Include="..\RiveRuntime.Android\RiveRuntime.Android.csproj" />-->
-        <PackageReference Include="RiveRuntime.Android" Version="1.0.2" />
+      <ProjectReference Include="..\RiveRuntime.Android\RiveRuntime.Android.csproj" />
+<!--        <PackageReference Include="RiveRuntime.Android" Version="1.0.2" />-->
     </ItemGroup>
 
     <ItemGroup Condition="$(TargetFramework.Contains('-ios')) OR $(TargetFramework.Contains('maccatalyst'))">
         <ProjectReference Include="..\RiveRuntime.Apple\RiveRuntime.Apple.csproj" />
 <!--        <PackageReference Include="RiveRuntime.iOS" Version="1.0.3" />-->
-    </ItemGroup>
-
-    <ItemGroup>
-      <Compile Update="Platforms\Android\Alternative\CustomRiveView.cs">
-        <ExcludeFromCurrentConfiguration>false</ExcludeFromCurrentConfiguration>
-      </Compile>
     </ItemGroup>
     
 </Project>

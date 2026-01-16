@@ -11,7 +11,7 @@ namespace RiveRuntime.Maui;
 public partial class RiveSpriteViewHandler() : ViewHandler<RiveSpriteView, RiveView>(PropertyMapper, CommandMapper)
 {
     private RiveView? riveView;
-    private AppleRiveViewModel? riveViewModel;
+    private RiveViewModel? riveViewModel;
     
     private static readonly IPropertyMapper<RiveSpriteView, RiveSpriteViewHandler> PropertyMapper =
         new PropertyMapper<RiveSpriteView, RiveSpriteViewHandler>(ViewMapper)
@@ -45,15 +45,16 @@ public partial class RiveSpriteViewHandler() : ViewHandler<RiveSpriteView, RiveV
         // DEPRECATED: animation playback: https://rive.app/docs/runtimes/animation-playback#apple
         // Priority: machine playback: https://rive.app/docs/runtimes/state-machines
         
-        riveViewModel = new AppleRiveViewModel(fileName: VirtualView.ResourceName, extension: ".riv", bundle: NSBundle.MainBundle,
+        riveViewModel = new RiveViewModel(fileName: VirtualView.ResourceName, extension: ".riv", bundle: NSBundle.MainBundle,
             stateMachineName: VirtualView.StateMachineName, fit: RiveFit.contain, alignment: RiveAlignment.center, autoPlay: true,
             artboardName: null, loadCdn: true, customLoader: null);
         if (!string.IsNullOrWhiteSpace(VirtualView.AnimationName))
             riveViewModel.RiveModel?.SetAnimation(VirtualView.AnimationName, out _);
         
-        riveViewModel.VirtualView.SetTarget(VirtualView);
         riveView = riveViewModel.CreateRiveView;
-        
+        var stateMachineDelegate = new AppleRiveStateMachineDelegate();
+        stateMachineDelegate.VirtualView.SetTarget(VirtualView);
+        riveView.stateMachineDelegate = stateMachineDelegate;
         
         return  riveView;
     }

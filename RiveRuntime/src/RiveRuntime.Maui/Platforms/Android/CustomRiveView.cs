@@ -1,4 +1,3 @@
-using System.Diagnostics.Tracing;
 using Android.Content;
 using Android.Views;
 using Android.Widget;
@@ -16,10 +15,8 @@ public sealed class CustomRiveView : LinearLayout
 {
     internal RiveAnimationView? AnimationView;
     internal WeakReference<RiveSpriteView?> VirtualView = new(null);
-    internal string? ResourceName;
-
-    private StateListener? _stateListener;
-    private EventListener? _eventListener;
+    
+    private RiveSpriteViewListener? _riveSpriteViewListener;
     private readonly Context _context;
 
     public CustomRiveView(Context context) : base(context)
@@ -40,12 +37,6 @@ public sealed class CustomRiveView : LinearLayout
         if (resourceIdentifier == 0)
             throw new Exception("Resource not found");
 
-        ResourceName = virtualView.ResourceName;
-
-        var riveAlignment = virtualView.Alignment.AsRive();
-        var riveFit = virtualView.Fit.AsRive();
-        var riveLoop = virtualView.Loop.AsRive();
-
         var animationView = new RiveAnimationView(_context, null);
 
         // if (virtualView.DynamicAssets?.Count > 0)
@@ -56,13 +47,9 @@ public sealed class CustomRiveView : LinearLayout
         animationView.SetRiveResource(resourceIdentifier, virtualView.ArtboardName, virtualView.AnimationName, virtualView.StateMachineName,
             virtualView.AutoPlay, false, virtualView.Fit.AsRive(), virtualView.Alignment.AsRive(), virtualView.Loop.AsRive());
 
-        _stateListener = new StateListener();
-        _stateListener.RiveViewReference.SetTarget(this);
-        animationView.RegisterListener(_stateListener);
-
-        _eventListener = new EventListener();
-        _eventListener.RiveViewReference.SetTarget(this);
-        animationView.AddEventListener(_eventListener);
+        _riveSpriteViewListener = new RiveSpriteViewListener();
+        _riveSpriteViewListener.RiveViewReference.SetTarget(this);
+        animationView.RegisterListener(_riveSpriteViewListener);
 
         // if (virtualView.TextRuns != null)
         // {
@@ -81,12 +68,11 @@ public sealed class CustomRiveView : LinearLayout
             return;
 
         RemoveView(AnimationView);
-
-        if (_stateListener != null)
-            AnimationView.UnregisterListener(_stateListener);
-
-        if (_eventListener != null)
-            AnimationView.RemoveEventListener(_eventListener);
+        
+        if (_riveSpriteViewListener != null)
+        {
+            AnimationView.RemoveEventListener(_riveSpriteViewListener);
+        }
 
         AnimationView.Dispose();
         AnimationView = null;
@@ -129,19 +115,12 @@ public sealed class CustomRiveView : LinearLayout
     public new void Dispose()
     {
         RemoveAnimationView();
-
-        if (_stateListener != null)
+        
+        if (_riveSpriteViewListener != null)
         {
-            _stateListener.RiveViewReference.SetTarget(null);
-            _stateListener.Dispose();
-            _stateListener = null;
-        }
-
-        if (_eventListener != null)
-        {
-            _eventListener.RiveViewReference.SetTarget(null);
-            _eventListener.Dispose();
-            _eventListener = null;
+            _riveSpriteViewListener.RiveViewReference.SetTarget(null);
+            _riveSpriteViewListener.Dispose();
+            _riveSpriteViewListener = null;
         }
 
         // if (VirtualView.TryGetTarget(out var control))

@@ -63,11 +63,11 @@
         <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)"/>
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.9"/>
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
-<!--        <PackageReference Include="RiveRuntime.Maui" Version="1.0.1" />-->
+        <PackageReference Include="RiveRuntime.Maui" Version="1.0.2" />
     </ItemGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\..\src\RiveRuntime.Maui\RiveRuntime.Maui.csproj" />
-    </ItemGroup>
+<!--    <ItemGroup>-->
+<!--      <ProjectReference Include="..\..\src\RiveRuntime.Maui\RiveRuntime.Maui.csproj" />-->
+<!--    </ItemGroup>-->
 
 </Project>

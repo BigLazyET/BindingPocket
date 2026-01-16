@@ -1,86 +1,85 @@
-// using System;
-// using System.Collections.Generic;
-// using System.Linq;
-// using App.Rive.Runtime.Kotlin.Controllers;
-// using App.Rive.Runtime.Kotlin.Core;
-// using RiveRuntime.Maui.Controls;
-// using RiveRuntime.Maui.Enums;
-// using Object = Java.Lang.Object;
-//
-// namespace RiveRuntime.Maui;
-//
-// public class RiveSpriteViewListener : Object, RiveFileController.IRiveEventListener, RiveFileController.IListener
-// {
-//     public WeakReference<RiveSpriteView?> VirtualView { get; set; } = new(null);
-//     
-//     public void NotifyEvent(RiveEvent riveEvent)
-//     {
-//         if (!VirtualView.TryGetTarget(out var virtualView)) return;
-//
-//         var type = RiveSpriteViewEvent.GeneralEvent;
-//         if (riveEvent.Type == EventType.OpenURLEvent)
-//         {
-//             type = RiveSpriteViewEvent.OpenURLEvent;
-//         }
-//
-//         var properties = riveEvent.Properties
-//             .ToDictionary<KeyValuePair<string, Object>, string, object>(k => k.Key, k => k.Value);
-//         var args = new StateMachineEventReceivedArgs(riveEvent.Name, type, properties);
-//
-//         virtualView.EventReceivedManager.HandleEvent(this, args, nameof(RiveSpriteView.EventReceived));
-//         virtualView.EventReceivedCommand?.Execute(args);
-//     }
-//
-//     public void NotifyAdvance(float elapsed)
-//     {
-//         
-//     }
-//
-//     public void NotifyLoop(IPlayableInstance animation)
-//     {
-//         
-//     }
-//
-//     public void NotifyPause(IPlayableInstance animation)
-//     {
-//         
-//     }
-//
-//     public void NotifyPlay(IPlayableInstance animation)
-//     {
-//         
-//     }
-//     
-//     public void NotifyStop(IPlayableInstance animation)
-//     {
-//         
-//     }
-//
-//     public void NotifyStateChanged(string stateMachineName, string stateName)
-//     {
-//         if (!VirtualView.TryGetTarget(out var virtualView)) return;
-//         var handler = virtualView.Handler as RiveSpriteViewHandler;
-//         if (handler?.riveAnimationView == null) return;
-//         
-//         var inputs = new Dictionary<string, object>();
-//         foreach (var stateMachine in handler.riveAnimationView.StateMachines)
-//         {
-//             foreach (var input in stateMachine.Inputs)
-//             {
-//                 switch (input)
-//                 {
-//                     case SMINumber smiNumber:
-//                         inputs.Add(smiNumber.Name, smiNumber.Value);
-//                         break;
-//                     case SMIBoolean smiBool:
-//                         inputs.Add(smiBool.Name, smiBool.Value);
-//                         break;
-//                 }
-//             }
-//         }
-//
-//         var args = new StateMachineChangeArgs(stateMachineName, stateName, inputs);
-//         virtualView.StateChangedManager.HandleEvent(this, args, nameof(RiveSpriteView.StateChanged));
-//         virtualView.StateChangedCommand?.Execute(args);
-//     }
-// }
+using App.Rive.Runtime.Kotlin.Controllers;
+using App.Rive.Runtime.Kotlin.Core;
+using RiveRuntime.Maui.Controls;
+using RiveRuntime.Maui.Enums;
+using Object = Java.Lang.Object;
+
+namespace RiveRuntime.Maui;
+
+public class RiveSpriteViewListener : Object, RiveFileController.IRiveEventListener, RiveFileController.IListener
+{
+    public WeakReference<CustomRiveView?> RiveViewReference { get; set; } = new(null);
+    
+    public void NotifyEvent(RiveEvent riveEvent)
+    {
+        if (!RiveViewReference.TryGetTarget(out var handler) || !handler.VirtualView.TryGetTarget(out var virtualView))
+            return;
+
+        var type = RiveSpriteViewEvent.GeneralEvent;
+        if (riveEvent.Type == EventType.OpenURLEvent)
+        {
+            type = RiveSpriteViewEvent.OpenURLEvent;
+        }
+
+        var properties = riveEvent.Properties
+            .ToDictionary<KeyValuePair<string, Object>, string, object>(k => k.Key, k => k.Value);
+        var args = new StateMachineEventReceivedArgs(riveEvent.Name, type, properties);
+
+        virtualView.EventReceivedManager.HandleEvent(this, args, nameof(RiveSpriteView.EventReceived));
+        virtualView.EventReceivedCommand?.Execute(args);
+    }
+
+    public void NotifyAdvance(float elapsed)
+    {
+        
+    }
+
+    public void NotifyLoop(IPlayableInstance animation)
+    {
+        
+    }
+
+    public void NotifyPause(IPlayableInstance animation)
+    {
+        
+    }
+
+    public void NotifyPlay(IPlayableInstance animation)
+    {
+        
+    }
+    
+    public void NotifyStop(IPlayableInstance animation)
+    {
+        
+    }
+
+    public void NotifyStateChanged(string stateMachineName, string stateName)
+    {
+        if (!RiveViewReference.TryGetTarget(out var handler) ||
+            handler.AnimationView == null ||
+            !handler.VirtualView.TryGetTarget(out var virtualView))
+            return;
+
+        var inputs = new Dictionary<string, object>();
+        foreach (var stateMachine in handler.AnimationView.StateMachines)
+        {
+            foreach (var input in stateMachine.Inputs)
+            {
+                switch (input)
+                {
+                    case SMINumber smiNumber:
+                        inputs.Add(smiNumber.Name, smiNumber.Value);
+                        break;
+                    case SMIBoolean smiBool:
+                        inputs.Add(smiBool.Name, smiBool.Value);
+                        break;
+                }
+            }
+        }
+
+        var args = new StateMachineChangeArgs(stateMachineName, stateName, inputs);
+        virtualView.StateChangedManager.HandleEvent(this, args, nameof(RiveSpriteView.StateChanged));
+        virtualView.StateChangedCommand?.Execute(args);
+    }
+}
