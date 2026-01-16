@@ -1,9 +1,11 @@
 <h1 align="center">BindingPocket</h1>
-<p align="center"><small>MAUI bindings for Rive on iOS, Android, and macOS</small></p>
+<p align="center"><small>MAUI bindings for [X]Project on iOS, Android, and macOS</small></p>
 
 This repository is a collection of .NET MAUI binding libraries. RiveRuntime.Maui is the first binding project; additional bindings (2, 3, …) will be added over time.
 
 ## 1. RiveRuntime.Maui
+
+MAUI bindings for RiveRuntime on iOS, Android, and macOS
 
 Bindings around the native Rive runtimes to support iOS, Android, and macOS in .NET MAUI.
 - rive-android-10.5.3.aar
@@ -23,6 +25,8 @@ Bindings around the native Rive runtimes to support iOS, Android, and macOS in .
 - Minimum iOS target: 14.0; macOS target: 15.0
 - Add your `.riv` assets to `Resources/Images`
 - See the [demo](./RiveRuntime/demo/Rive.Demo) for more details
+- If you just need Rive on sinlgele platform, consider using [RiveRuntime.iOS](https://www.nuget.org/packages/RiveRuntime.iOS/) or [RiveRuntime.Android](https://www.nuget.org/packages/RiveRuntime.Android/) instead.
+- If you need help, please open an issue.
 
 ## 2. One or more additional bindings
 More bindings are coming soon.
